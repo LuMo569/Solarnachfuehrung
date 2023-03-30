@@ -41,8 +41,7 @@ int difver;                               //diese wird benötigt, um eine Hyster
 int tol = 50;                             //Toleranzwert für die Hysterese
 
 void setup() {
-  myservo.attach(9);                      //Servo an Pin 9                  
-  Serial.begin(9600);
+  myservo.attach(9);                      //Servo an Pin 9                 
   motor.setSpeed(4);                      //Geschwindigkeit des Schrittmotors
 }
 
@@ -75,13 +74,4 @@ void loop() {
         }
     } 
   delay(1000);                            //Pause für eine Sekunde, dass die Motoren genügend Zeit zum Bewegen haben
-
-  Serial.println(difhor);
-  Serial.println(difver);
-  
-  Serial.println(oben);
-  Serial.println(oben);
-  Serial.println(unten);
-  Serial.println(unten);
-  
 }
