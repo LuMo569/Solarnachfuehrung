@@ -20,10 +20,10 @@
 #include <Servo.h>
 #include <Stepper.h>
 
-int SPU = 2048;
-Stepper motor(SPU, 4, 6, 5, 7);
+int SPU = 2048;                           //SPU = Steps per Revolution
+Stepper motor(SPU, 4, 6, 5, 7);           //Einbinden des Schrittmotors
 
-Servo myservo;
+Servo myservo;                            //Einbinden des Servos
 
 int ldr1;                                 //Hier werden die Ausgelsenen Werte der LDRs gespeichert
 int ldr2;
