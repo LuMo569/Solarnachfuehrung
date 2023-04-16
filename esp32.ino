@@ -69,10 +69,8 @@ void loop(){
             client.println("<p>" + power + " Volt" + "</p>");
             client.println("</body></html>");
             
-            //Die HTTP-Antwort endet mit einer weiteren Leerzeile
-            client.println();
-            //break aus der while Schleife
-            break;
+            client.println();                               //Die HTTP-Antwort endet mit einer weiteren Leerzeile
+            break;                                          //break aus der while Schleife
           } else {                                          //wenn man einen zeilenumbruch erhalten hat, so lösche currentLine
             currentLine = "";
           }
