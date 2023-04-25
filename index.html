@@ -46,7 +46,7 @@ var chartT = new Highcharts.Chart({                                             
   credits: { enabled: false }
 });
 setInterval(function ( ) {
-  var xhttp = new XMLHttpRequest();                                                      <!--Diese Funktion holt die Information vom Arduino-->
+  var xhttp = new XMLHttpRequest();                                                     <!--Diese Funktion holt die Information vom Arduino-->
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var x = (new Date()).getTime()+7200000,                                            <!--Aktuelle Zeit berechnen-->
