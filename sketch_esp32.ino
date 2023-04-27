@@ -34,7 +34,7 @@ void setup(){
   Serial.begin(115200);                                                   //debugging zwecke und zum IP anzeigen lassen
 
   if(!SPIFFS.begin()){                                                    //SPIFFS initialisieren
-    Serial.println("An Error has occurred while mounting SPIFFS");
+    Serial.println("Fehler mit SPIFFS");
     return;
   }
 
