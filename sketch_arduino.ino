@@ -39,7 +39,7 @@ int rechts;
 int difhor;                                       //Die Differenz von oben und unten bzw. links und rechts wird in diesen beiden Variablen gespeichert
 int difver;                                       //diese wird benötigt, um eine Hysterese zu bilden und somit das Zittern des Motors zu verhindern
 
-int tol = 40;                                     //Toleranzwert für die Hysterese
+int tol = 50;                                     //Toleranzwert für die Hysterese
 
 void setup() {
   myservo.attach(9);                              //Servo an Pin 9                 
@@ -64,7 +64,7 @@ void loop() {
   if(tol < -1*difhor || tol < difhor){            //Diese Zeile stellt die Hysterese dar, positiv und negativ, da die Differenz positv oder (||) negativ sein kann
     if(links < rechts){                           //wenn der wert rechts größer ist (ergo rechts ist es heller), dann drehe nach rechts (Rotation am Schrittmotor) 
       motor.step(50);
-      }else if(links > rechts){                   //anderfalls drehe nach links
+      }else if(links > rechts){                   //andernfalls drehe nach links
         motor.step(-50);      
         }
     } 
