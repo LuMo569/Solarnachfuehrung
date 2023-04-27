@@ -41,7 +41,7 @@ void setup(){
   WiFi.begin(ssid, password);                                             //Verbindung zum Wlan herstellen mit oben gespeicherten Informationen
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("Connecting to WiFi..");
+    Serial.println("Verbindet mit dem Wlan...");
   }
 
   Serial.println(WiFi.localIP());                                         //IP Adresse am seriellen Monitor ausdrucken
